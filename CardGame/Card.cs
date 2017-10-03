@@ -18,12 +18,12 @@ namespace CardGame
             suit = c;
         }
 
-        public char getSuit()
+        public char GetSuit()
         {
             return suit;
         }
 
-        public int getValue()
+        public int GetValue()
         {
             return value;
         }
