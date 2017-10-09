@@ -22,9 +22,23 @@ namespace CardGame
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        //Card[] myDeck = new Card[52];
+        Deck myDeck = new Deck();
+
         public MainPage()
         {
             this.InitializeComponent();
+            
+        }
+
+        private void TextBlock_Loaded(object sender, RoutedEventArgs e)
+        {
+            this.playArea.Text = "";
+
+            for (int i = 0; i < 52; i++)
+            {
+                this.playArea.Text += myDeck.deck[i].GetValue().ToString() + " of " + myDeck.deck[i].GetSuit().ToString() + "\n";
+            }
         }
     }
 }
