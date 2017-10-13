@@ -31,13 +31,13 @@
     <AppXManifest Include="C:\Users\parko\Documents\Visual Studio 2017\Projects\CardGame\CardGame\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-10-09T06:53:26.765</Modified>
+      <Modified>2017-10-13T23:15:37.232</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\parko\Documents\Visual Studio 2017\Projects\CardGame\CardGame\bin\x86\Debug\CardGame.exe">
       <PackagePath>entrypoint\CardGame.exe</PackagePath>
-      <Modified>2017-10-09T06:53:25.896</Modified>
+      <Modified>2017-10-13T23:15:36.337</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\parko\.nuget\packages\Microsoft.CSharp\4.0.1\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -535,7 +535,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\parko\Documents\Visual Studio 2017\Projects\CardGame\CardGame\bin\x86\Debug\CardGame.xr.xml">
       <PackagePath>CardGame.xr.xml</PackagePath>
-      <Modified>2017-10-09T06:44:08.438</Modified>
+      <Modified>2017-10-13T23:15:36.186</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.15063.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -544,11 +544,11 @@
     <AppxPackagedFile Include="C:\Users\parko\Documents\Visual Studio 2017\Projects\CardGame\CardGame\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-10-09T06:53:26.475</Modified>
+      <Modified>2017-10-13T23:15:36.935</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\parko\Documents\Visual Studio 2017\Projects\CardGame\CardGame\bin\x86\Debug\Core\CardGame.exe">
       <PackagePath>CardGame.exe</PackagePath>
-      <Modified>2017-10-09T06:53:26.755</Modified>
+      <Modified>2017-10-13T23:15:37.223</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

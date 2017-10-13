@@ -5,18 +5,21 @@
     xmlns:local="using:CardGame"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
+    mc:Ignorable="d" Height="610" Width="640px">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <TextBlock Margin="10,10,0,0" TextWrapping="Wrap" Text="Player 1" VerticalAlignment="Top" Height="170" Width="240" HorizontalAlignment="Left"/>
-        <TextBlock HorizontalAlignment="Left" Margin="389,10,0,0" TextWrapping="Wrap" Text="Player 2" VerticalAlignment="Top" Height="170" Width="240"/>
-        <ScrollViewer>
-            <TextBlock x:ConnectionId='1' x:Name="playArea" HorizontalAlignment="Left" Height="165" Margin="10,185,0,0" TextWrapping="Wrap" Text="Play Area" VerticalAlignment="Top" Width="619"                           />
+        <ScrollViewer Height="200px" Margin="0,0,0,511">
+            <TextBlock x:ConnectionId='1' x:Name="playArea" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Play Area" VerticalAlignment="Top" Width="640"                           />
         </ScrollViewer>
-        <Button Content="Start" HorizontalAlignment="Left" Margin="255,38,0,0" VerticalAlignment="Top" Width="129"/>
-        <Button Content="End Turn" HorizontalAlignment="Left" Margin="255,75,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.896,1.02" Width="129"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="255,112,0,0" VerticalAlignment="Top" Height="31" Width="129"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="255,148,0,0" VerticalAlignment="Top" Width="129"/>
+        <Button Content="Deal" Width="640px" ></Button>
+        <Button Content="Player 1 Turn" Width="640px" />
+        <Button Content="Player 2 Turn" Width="640px" />
+        <ScrollViewer Height="200px" Width="320px" Margin="0,316,320,95">
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Player 1" VerticalAlignment="Top"/>
+        </ScrollViewer>
+        <ScrollViewer Margin="320, 316, 0, 95">
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Player 2" VerticalAlignment="Top" />
+        </ScrollViewer>
     </Grid>
 </Page>
 
