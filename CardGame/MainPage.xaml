@@ -9,7 +9,7 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <ScrollViewer Height="200px" Margin="0,0,0,511">
-            <TextBlock x:Name="playArea" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Play Area" VerticalAlignment="Top" Width="640" Loaded="TextBlock_Loaded" />
+            <TextBlock x:Name="PlayArea" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Play Area" VerticalAlignment="Top" Width="640" Loaded="PlayArea_Loaded" />
         </ScrollViewer>
         <Button x:Name="DealButton" Content="Deal" Width="640px" Margin="0,205,0,374" Click="DealButton_Click"></Button>
         <Button x:Name="Player1Button" Content="Player 1 Turn" Width="640px" Margin="0,242,0,337" Click="Player1Button_Click"/>

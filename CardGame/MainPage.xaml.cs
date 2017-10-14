@@ -31,28 +31,22 @@ namespace CardGame
             Player2Button.IsEnabled = false;
         }
 
-        private void TextBlock_Loaded(object sender, RoutedEventArgs e)
+        private void PlayArea_Loaded(object sender, RoutedEventArgs e)
         {
-            this.playArea.Text = "";
+            this.PlayArea.Text = "";
             for (int i = 0; i < myDeck.deckSize; i++)
             {
-                this.playArea.Text += myDeck.deck[i].GetValue().ToString() + " of " + myDeck.deck[i].GetSuit().ToString() + "\n";
+                this.PlayArea.Text += myDeck.deck[i].GetValue().ToString() + " of " + myDeck.deck[i].GetSuit().ToString() + "\n";
             }
         }
 
         private void DealButton_Click(object sender, RoutedEventArgs e)
         {
-            myDeck.DealDeck();
-
-            this.Player1HandBox.Text = "";
-            this.Player2HandBox.Text = "";
-
-            for (int i = 0; i < myDeck.deckSize / 2; i++)
-            {
-                this.playArea.Text = "";
-                this.Player1HandBox.Text += myDeck.player1Hand[i].GetValue().ToString() + " of " + myDeck.player1Hand[i].GetSuit().ToString() + "\n";
-                this.Player2HandBox.Text += myDeck.player2Hand[i].GetValue().ToString() + " of " + myDeck.player2Hand[i].GetSuit().ToString() + "\n";
-            }
+            myDeck.DealDeck();    
+            
+            Player1Text();
+            Player2Text();
+            PlayArea.Text = "";
 
             DealButton.IsEnabled = false;
             Player1Button.IsEnabled = true;
@@ -61,12 +55,50 @@ namespace CardGame
 
         private void Player1Button_Click(object sender, RoutedEventArgs e)
         {
+            if (PlayArea.Text == "")
+            {
+                myDeck.player1Hand[0].SetStatus(true);
+                myDeck.deck[0].SetStatus(true);
+            } else
+            {
 
+            }
+
+            PlayAreaText();
+            Player1Text();
+
+            Player1Button.IsEnabled = false;
+            Player2Button.IsEnabled = true;
         }
 
         private void Player2Button_Click(object sender, RoutedEventArgs e)
         {
+            Player1Button.IsEnabled = true;
+            Player2Button.IsEnabled = false;
+        }
 
+        private void PlayAreaText()
+        {
+            PlayArea.Text = "";
+            for (int i = 0; i < myDeck.deckSize; i++)
+                if (myDeck.deck[i].GetStatus() == true)
+                    this.PlayArea.Text += myDeck.deck[i].GetValue().ToString() + " of " + myDeck.deck[i].GetSuit().ToString() + "\n";
+        }
+
+        private void Player1Text()
+        {
+            Player1HandBox.Text = "";
+            for (int i = 0; i < myDeck.deckSize / 2; i++)
+                if (myDeck.player1Hand[i].GetStatus() != true)
+                    this.Player1HandBox.Text += myDeck.player1Hand[i].GetValue().ToString() + " of " + myDeck.player1Hand[i].GetSuit().ToString() + "\n";
+        }
+
+        private void Player2Text()
+        {
+            Player2HandBox.Text = "";
+            for (int i = 0; i < myDeck.deckSize / 2; i++)
+                if (myDeck.player2Hand[i].GetStatus() != true)
+                    this.Player2HandBox.Text += myDeck.player2Hand[i].GetValue().ToString() + " of " + myDeck.player2Hand[i].GetSuit().ToString() + "\n";
         }
     }
 }

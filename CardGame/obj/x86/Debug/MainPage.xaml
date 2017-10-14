@@ -9,11 +9,11 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <ScrollViewer Height="200px" Margin="0,0,0,511">
-            <TextBlock x:ConnectionId='6' x:Name="playArea" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Play Area" VerticalAlignment="Top" Width="640"                           />
+            <TextBlock x:ConnectionId='6' x:Name="PlayArea" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Play Area" VerticalAlignment="Top" Width="640"                          />
         </ScrollViewer>
         <Button x:ConnectionId='1' x:Name="DealButton" Content="Deal" Width="640px" Margin="0,205,0,374"                         ></Button>
-        <Button x:ConnectionId='2' x:Name="Player1Button" Content="Player 1 Turn" Width="640px" Margin="0,242,0,337"/>
-        <Button x:ConnectionId='3' x:Name="Player2Button" Content="Player 2 Turn" Width="640px" Margin="0,279,0,300"/>
+        <Button x:ConnectionId='2' x:Name="Player1Button" Content="Player 1 Turn" Width="640px" Margin="0,242,0,337"                            />
+        <Button x:ConnectionId='3' x:Name="Player2Button" Content="Player 2 Turn" Width="640px" Margin="0,279,0,300"                            />
         <ScrollViewer Height="200px" Width="320px" Margin="0,316,320,95">
             <TextBlock x:ConnectionId='5' x:Name="Player1HandBox" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Player 1" VerticalAlignment="Top"/>
         </ScrollViewer>

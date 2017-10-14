@@ -11,11 +11,13 @@ namespace CardGame
         int id; // 0 ... 51
         int value; // 1 ... 13
         char suit; // s, h, c, d
+        bool status; // true or false (used or not used)
 
         public Card(int i, int v, char c) {
             id = i;
             value = v;
             suit = c;
+            status = false;
         }
 
         public int GetId()
@@ -46,6 +48,16 @@ namespace CardGame
         public void SetValue(int v)
         {
             value = v;
+        }
+
+        public bool GetStatus()
+        {
+            return status;
+        }
+
+        public void SetStatus(bool s)
+        {
+            status = s;
         }
     }
 }
