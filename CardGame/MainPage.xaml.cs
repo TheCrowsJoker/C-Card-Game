@@ -27,7 +27,8 @@ namespace CardGame
         public MainPage()
         {
             this.InitializeComponent();
-            
+            Player1Button.IsEnabled = false;
+            Player2Button.IsEnabled = false;
         }
 
         private void TextBlock_Loaded(object sender, RoutedEventArgs e)
@@ -52,6 +53,20 @@ namespace CardGame
                 this.Player1HandBox.Text += myDeck.player1Hand[i].GetValue().ToString() + " of " + myDeck.player1Hand[i].GetSuit().ToString() + "\n";
                 this.Player2HandBox.Text += myDeck.player2Hand[i].GetValue().ToString() + " of " + myDeck.player2Hand[i].GetSuit().ToString() + "\n";
             }
+
+            DealButton.IsEnabled = false;
+            Player1Button.IsEnabled = true;
+            Player2Button.IsEnabled = false;
+        }
+
+        private void Player1Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Player2Button_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

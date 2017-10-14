@@ -12,9 +12,7 @@ namespace CardGame
         public int deckSize = sizeOfDeck; // Used to allow for loops in other files to work more dynamically
         public Card[] deck = new Card[sizeOfDeck];
         public Card[] player1Hand = new Card[sizeOfDeck / 2];
-        public Card[] player2Hand = new Card[sizeOfDeck / 2];
-
-        
+        public Card[] player2Hand = new Card[sizeOfDeck / 2];        
 
         public Deck()
         {
@@ -40,7 +38,25 @@ namespace CardGame
 
         public void ShuffleDeck()
         {
+            Card tempCard = new Card(1, 1, 's');
+            Random rnd = new Random();
 
+            for (int i = 0; i < sizeOfDeck; i++)
+            {
+                int rndCardNo = rnd.Next(sizeOfDeck);
+
+                tempCard.SetId(deck[rndCardNo].GetId());
+                tempCard.SetValue(deck[rndCardNo].GetValue());
+                tempCard.SetSuit(deck[rndCardNo].GetSuit());
+
+                deck[rndCardNo].SetId(deck[i].GetId());
+                deck[rndCardNo].SetValue(deck[i].GetValue());
+                deck[rndCardNo].SetSuit(deck[i].GetSuit());
+
+                deck[i].SetId(tempCard.GetId());
+                deck[i].SetValue(tempCard.GetValue());
+                deck[i].SetSuit(tempCard.GetSuit());
+            }
         }
 
         public void DealDeck()
@@ -49,15 +65,11 @@ namespace CardGame
 
             // Player 1 hand
             for (int i = 0; i < sizeOfDeck / 2; i++)
-            {
                 player1Hand[i] = new Card(deck[i].GetId(), deck[i].GetValue(), deck[i].GetSuit());
-            }
 
             // Player 2 hand
             for (int i = 0; i < sizeOfDeck / 2; i++)
-            {
                 player2Hand[i] = new Card(deck[i + (sizeOfDeck / 2)].GetId(), deck[i + (sizeOfDeck / 2)].GetValue(), deck[i + (sizeOfDeck / 2)].GetSuit());
-            }
         }
     }
 }

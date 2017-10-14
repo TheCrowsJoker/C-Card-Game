@@ -12,8 +12,8 @@
             <TextBlock x:Name="playArea" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Play Area" VerticalAlignment="Top" Width="640" Loaded="TextBlock_Loaded" />
         </ScrollViewer>
         <Button x:Name="DealButton" Content="Deal" Width="640px" Margin="0,205,0,374" Click="DealButton_Click"></Button>
-        <Button Content="Player 1 Turn" Width="640px" Margin="0,242,0,337"/>
-        <Button Content="Player 2 Turn" Width="640px" Margin="0,279,0,300"/>
+        <Button x:Name="Player1Button" Content="Player 1 Turn" Width="640px" Margin="0,242,0,337" Click="Player1Button_Click"/>
+        <Button x:Name="Player2Button" Content="Player 2 Turn" Width="640px" Margin="0,279,0,300" Click="Player2Button_Click"/>
         <ScrollViewer Height="200px" Width="320px" Margin="0,316,320,95">
             <TextBlock x:Name="Player1HandBox" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Player 1" VerticalAlignment="Top"/>
         </ScrollViewer>
