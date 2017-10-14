@@ -22,7 +22,6 @@ namespace CardGame
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        //Card[] myDeck = new Card[52];
         Deck myDeck = new Deck();
 
         public MainPage()
@@ -34,10 +33,24 @@ namespace CardGame
         private void TextBlock_Loaded(object sender, RoutedEventArgs e)
         {
             this.playArea.Text = "";
-
-            for (int i = 0; i < 52; i++)
+            for (int i = 0; i < myDeck.deckSize; i++)
             {
                 this.playArea.Text += myDeck.deck[i].GetValue().ToString() + " of " + myDeck.deck[i].GetSuit().ToString() + "\n";
+            }
+        }
+
+        private void DealButton_Click(object sender, RoutedEventArgs e)
+        {
+            myDeck.DealDeck();
+
+            this.Player1HandBox.Text = "";
+            this.Player2HandBox.Text = "";
+
+            for (int i = 0; i < myDeck.deckSize / 2; i++)
+            {
+                this.playArea.Text = "";
+                this.Player1HandBox.Text += myDeck.player1Hand[i].GetValue().ToString() + " of " + myDeck.player1Hand[i].GetSuit().ToString() + "\n";
+                this.Player2HandBox.Text += myDeck.player2Hand[i].GetValue().ToString() + " of " + myDeck.player2Hand[i].GetSuit().ToString() + "\n";
             }
         }
     }

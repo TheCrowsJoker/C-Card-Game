@@ -9,16 +9,16 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <ScrollViewer Height="200px" Margin="0,0,0,511">
-            <TextBlock x:ConnectionId='1' x:Name="playArea" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Play Area" VerticalAlignment="Top" Width="640"                           />
+            <TextBlock x:ConnectionId='4' x:Name="playArea" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Play Area" VerticalAlignment="Top" Width="640"                           />
         </ScrollViewer>
-        <Button Content="Deal" Width="640px" ></Button>
-        <Button Content="Player 1 Turn" Width="640px" />
-        <Button Content="Player 2 Turn" Width="640px" />
+        <Button x:ConnectionId='1' x:Name="DealButton" Content="Deal" Width="640px" Margin="0,205,0,374"                         ></Button>
+        <Button Content="Player 1 Turn" Width="640px" Margin="0,242,0,337"/>
+        <Button Content="Player 2 Turn" Width="640px" Margin="0,279,0,300"/>
         <ScrollViewer Height="200px" Width="320px" Margin="0,316,320,95">
-            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Player 1" VerticalAlignment="Top"/>
+            <TextBlock x:ConnectionId='3' x:Name="Player1HandBox" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Player 1" VerticalAlignment="Top"/>
         </ScrollViewer>
         <ScrollViewer Margin="320, 316, 0, 95">
-            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Player 2" VerticalAlignment="Top" />
+            <TextBlock x:ConnectionId='2' x:Name="Player2HandBox" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Player 2" VerticalAlignment="Top" />
         </ScrollViewer>
     </Grid>
 </Page>
